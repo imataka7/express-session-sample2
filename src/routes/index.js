@@ -9,7 +9,8 @@ router.get('/', function(req, res, next) {
   res.redirect('/login');
 },(req, res, next) => {
   // 最終リクエストの10秒後にセッションが失効する
-  req.session.cookie.expires = new Date(Date.now() + 10 * 1000);
+  // req.session.cookie.expires = new Date(Date.now() + 10 * 1000);
+  req.session.cookie.maxAge = 30 * 1000;
   res.render('index', { title: 'Express', username: req.user});
 });
 

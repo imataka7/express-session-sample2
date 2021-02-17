@@ -30,7 +30,8 @@ const sessionSecret = (() => {
 
 const sessionOptions = {
   secret: sessionSecret,
-  resave: false,
+  resave: true,
+  rolling: true,
   saveUninitialized: false,
   cookie: {
     secure: false // この状態だとHTTPSじゃなくてもセッションをやり取りしてしまう。本番投入時はtrueで。
