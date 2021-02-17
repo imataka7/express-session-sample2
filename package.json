@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "start-redis": "SESSION_STORE=redis node ./bin/www"
+    "start": "node ./src/bin/www",
+    "start-redis": "SESSION_STORE=redis node ./src/bin/www"
   },
   "dependencies": {
     "connect-redis": "^3.4.0",
